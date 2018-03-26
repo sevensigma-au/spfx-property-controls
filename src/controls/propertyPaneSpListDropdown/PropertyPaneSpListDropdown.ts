@@ -13,7 +13,7 @@ import { QueryDropdown, IQueryDropdownProps } from '../../common/queryDropdown/Q
 
 export interface IPropertyPaneSpListDropDownProps {
   webAbsoluteUrl: string;
-  defaultKey?: string;
+  selectedKey?: string;
   label?: string;
   disabled?: boolean;
   loadOptionsDelayMilliSecs?: number;
@@ -48,7 +48,7 @@ export class PropertyPaneSpListDropdownControl implements IPropertyPaneField<IPr
     this.properties = {
       key: this.getComponentKey(targetProperty),
       webAbsoluteUrl: properties.webAbsoluteUrl,
-      defaultKey: properties.defaultKey,
+      selectedKey: properties.selectedKey,
       label: properties.label,
       disabled: properties.disabled,
       loadOptionsDelayMilliSecs: properties.loadOptionsDelayMilliSecs,
@@ -80,7 +80,7 @@ export class PropertyPaneSpListDropdownControl implements IPropertyPaneField<IPr
     const element: React.ReactElement<IQueryDropdownProps> = React.createElement(QueryDropdown, {
       label: this.properties.label,
       stateKey: this.properties.webAbsoluteUrl,
-      defaultKey: this.properties.defaultKey,
+      defaultKey: this.properties.selectedKey,
       isDisabled: this.properties.disabled,
       loadOptionsDelayMilliSecs: this.properties.loadOptionsDelayMilliSecs,
       onChanged: this.onChanged,

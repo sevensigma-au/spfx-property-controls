@@ -15,7 +15,7 @@ import { QueryDropdown, IQueryDropdownProps } from '../../common/queryDropdown/Q
 export interface IPropertyPaneSpListColumnDropDownProps {
   webAbsoluteUrl: string;
   listTitle: string;
-  defaultKey?: string;
+  selectedKey?: string;
   label?: string;
   disabled?: boolean;
   includeInternalColumns?: boolean;
@@ -52,7 +52,7 @@ export class PropertyPaneSpListColumnDropdownControl implements IPropertyPaneFie
       key: this.getComponentKey(targetProperty),
       webAbsoluteUrl: properties.webAbsoluteUrl,
       listTitle: properties.listTitle,
-      defaultKey: properties.defaultKey,
+      selectedKey: properties.selectedKey,
       label: properties.label,
       disabled: properties.disabled,
       includeInternalColumns: properties.includeInternalColumns,
@@ -85,7 +85,7 @@ export class PropertyPaneSpListColumnDropdownControl implements IPropertyPaneFie
     const element: React.ReactElement<IQueryDropdownProps> = React.createElement(QueryDropdown, {
       label: this.properties.label,
       stateKey: `${this.properties.webAbsoluteUrl}-${this.properties.listTitle}`,
-      defaultKey: this.properties.defaultKey,
+      defaultKey: this.properties.selectedKey,
       isDisabled: this.properties.disabled,
       loadOptionsDelayMilliSecs: this.properties.loadOptionsDelayMilliSecs,
       onChanged: this.onChanged,

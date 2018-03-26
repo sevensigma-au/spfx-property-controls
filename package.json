@@ -1,6 +1,6 @@
 {
   "name": "@sevensigma/spfx-property-controls",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This package provides additional SPFX web part property pane controls.",
   "main": "dist/spfx-property-controls.js",
   "types": "lib/index.d.ts",
