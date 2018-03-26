@@ -1,0 +1,10 @@
+# Source files
+src/
+
+# Build files
+.npmignore
+tsconfig.json
+tslint.json
+yarn.lock
+webpack.config.js
+temp/

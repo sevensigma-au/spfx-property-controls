@@ -1,0 +1,23 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "array-type": false,
+    "arrow-parens": false,
+    "eofline": false,
+    "max-line-length": [ false, 240 ],
+    "member-ordering": false,
+    "no-var-requires": false,
+    "prefer-for-of": false,
+    "object-literal-sort-keys": false,
+    "one-line": [ true, "check-open-brace" ],
+    "ordered-imports": [ false ],
+    "quotemark": [ true, "single", "jsx-double" ],
+    "trailing-comma": [
+      true,
+      {
+        "multiline": "never",
+        "singleline": "never"
+      }
+    ]
+  }
+}

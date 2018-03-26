@@ -1,0 +1,72 @@
+{
+  "name": "@sevensigma/spfx-property-controls",
+  "version": "1.0.0",
+  "description": "This package provides additional SPFX web part property pane controls.",
+  "main": "dist/spfx-property-controls.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean-dist": "rimraf ./dist && rimraf ./lib  && rimraf ./temp && mkdir dist",
+    "lint": "./node_modules/.bin/tslint --project ./tsconfig.json",
+    "prebuild": "npm-run-all lint clean-dist",
+    "build": "SET NODE_ENV=production && webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sevensigma-au/spfx-property-controls.git"
+  },
+  "author": "sevensigma-au",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sevensigma-au/spfx-property-controls/issues"
+  },
+  "homepage": "https://github.com/sevensigma-au/spfx-property-controls#readme",
+  "devDependencies": {
+    "@microsoft/sp-core-library": "1.4.0",
+    "@microsoft/sp-lodash-subset": "1.4.0",
+    "@microsoft/sp-office-ui-fabric-core": "1.4.0",
+    "@microsoft/sp-webpart-base": "1.4.0",
+    "@pnp/common": "1.0.3",
+    "@pnp/logging": "1.0.3",
+    "@pnp/odata": "1.0.3",
+    "@pnp/sp": "1.0.3",
+    "@sevensigma/pnpjs-error-helper": "~1.0.2",
+    "@sevensigma/web-data-store": "~1.0.1",
+    "@types/react": "15.6.6",
+    "@types/react-dom": "15.5.6",
+    "@types/webpack-env": "1.13.5",
+    "css-loader": "^0.28.11",
+    "extract-text-webpack-plugin": "3.0.2",
+    "node-sass": "4.8.3",
+    "npm-run-all": "4.1.2",
+    "react": "15.6.2",
+    "react-dom": "15.6.2",
+    "rimraf": "2.6.2",
+    "sass-loader": "6.0.7",
+    "ts-loader": "3.5.0",
+    "tslint": "5.6.0",
+    "typescript": "2.4.2",
+    "webpack": "3.11.0",
+    "webpack-bundle-analyzer": "2.11.1",
+    "webpack-node-externals": "1.6.0",
+    "webpack-visualizer-plugin": "0.1.11"
+  },
+  "dependencies": {},
+  "peerDependencies": {
+    "@microsoft/sp-core-library": "^1.4.0",
+    "@microsoft/sp-lodash-subset": "^1.4.0",
+    "@microsoft/sp-office-ui-fabric-core": "^1.4.0",
+    "@microsoft/sp-webpart-base": "^1.4.0",
+    "@pnp/common": "^1.0.3",
+    "@pnp/logging": "^1.0.3",
+    "@pnp/odata": "^1.0.3",
+    "@pnp/sp": "^1.0.3",
+    "@sevensigma/pnpjs-error-helper": "^1.0.2",
+    "@sevensigma/web-data-store": "^1.0.1",
+    "@types/react": "^15.6.6",
+    "@types/react-dom": "^15.5.6",
+    "@types/webpack-env": "^1.13.5",
+    "react": "^15.6.2",
+    "react-dom": "^15.6.2"
+  }
+}
