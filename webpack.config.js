@@ -18,15 +18,15 @@ function getPlugins() {
 
   // Extract CSS to a separate file.
   plugins.push(
-    new Visualizer({
-      filename: '../temp/visualizer.html'
+    new ExtractTextPlugin({
+      filename: 'style.css'
     })
   );
 
   // Provides a sunburst chart that makes it easier to perform a quick high level overview.
   plugins.push(
-    new ExtractTextPlugin({
-      filename: 'style.css'
+    new Visualizer({
+      filename: '../temp/visualizer.html'
     })
   );
 
