@@ -5,13 +5,13 @@ import {
   PropertyPaneFieldType,
   IPropertyPaneCustomFieldProps
 } from '@microsoft/sp-webpart-base';
-import { IDropdownOption } from 'office-ui-fabric-react/lib/DropDown';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/Dropdown';
 import { WebStorageCache, StorageType } from '@sevensigma/web-data-store';
 import { ConfigError } from '../../model/ApplicationError';
 import { SharePointDataService } from '../../services/SharePointDataService';
 import { QueryDropdown, IQueryDropdownProps } from '../../common/queryDropdown/QueryDropdown';
 
-export interface IPropertyPaneSpListDropDownProps {
+export interface IPropertyPaneSpListDropdownProps {
   webAbsoluteUrl: string;
   selectedKey?: string;
   label?: string;
@@ -21,9 +21,9 @@ export interface IPropertyPaneSpListDropDownProps {
   onPropertyChange?: (propertyPath: string, oldValue: any, newValue: any) => void;
 }
 
-export interface IPropertyPaneSpListDropDownInternalProps extends IPropertyPaneSpListDropDownProps, IPropertyPaneCustomFieldProps {}
+export interface IPropertyPaneSpListDropdownInternalProps extends IPropertyPaneSpListDropdownProps, IPropertyPaneCustomFieldProps {}
 
-export class PropertyPaneSpListDropdownControl implements IPropertyPaneField<IPropertyPaneSpListDropDownProps> {
+export class PropertyPaneSpListDropdownControl implements IPropertyPaneField<IPropertyPaneSpListDropdownProps> {
   private static readonly baseComponentKey = 's32-spfx-splist-dropdown';
   private static readonly defaultCacheTimeoutSecs = 10;
 
@@ -33,9 +33,9 @@ export class PropertyPaneSpListDropdownControl implements IPropertyPaneField<IPr
 
   public type: PropertyPaneFieldType = PropertyPaneFieldType.Custom;
   public targetProperty: string;
-  public properties: IPropertyPaneSpListDropDownInternalProps;
+  public properties: IPropertyPaneSpListDropdownInternalProps;
 
-  constructor(targetProperty: string, properties: IPropertyPaneSpListDropDownProps) {
+  constructor(targetProperty: string, properties: IPropertyPaneSpListDropdownProps) {
     this.loadListTitles = this.loadListTitles.bind(this);
     this.onRender = this.onRender.bind(this);
     this.onChanged = this.onChanged.bind(this);
@@ -135,6 +135,6 @@ export class PropertyPaneSpListDropdownControl implements IPropertyPaneField<IPr
   }
 }
 
-export const PropertyPaneSpListDropdown = (targetProperty: string, properties: IPropertyPaneSpListDropDownProps): IPropertyPaneField<IPropertyPaneSpListDropDownProps> => {
+export const PropertyPaneSpListDropdown = (targetProperty: string, properties: IPropertyPaneSpListDropdownProps): IPropertyPaneField<IPropertyPaneSpListDropdownProps> => {
   return new PropertyPaneSpListDropdownControl(targetProperty, properties);
 };
